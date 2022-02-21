@@ -1,0 +1,5 @@
+in XOR-APP23 there is rdp XOR-APP07 see daisy:
+
+daisy:XorPasswordIsDead17
+
+psexec.py daisy:XorPasswordIsDead17@10.11.1.122

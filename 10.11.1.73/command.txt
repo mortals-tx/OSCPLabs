@@ -1,0 +1,21 @@
+http://10.11.1.73:8080/php/install/install.txt
+
+
+$babDBHost = "localhost"; /* MySql database server */
+$babDBLogin = "ovuser"; /* MySql database login */
+$babDBPasswd = "securepass"; /* MySql database password */
+$babDBName ="ovidentia"; /* MySql database name */
+$babUrl = "http://yourdomain.com/"; /* url to access to your site */
+
+User    : admin@admin.bab
+Password: 012345678
+
+file mnager: http://10.11.1.73:8080/php/index.php?tg=admfms
+
+upload reverse shell
+
+privesc:
+
+windows kernel vulnerabilities - Microsoft Windows (x86) - 'afd.sys' Local Privilege Escalation (MS11-046) CVE-2011-1249
+
+https://www.exploit-db.com/exploits/40564 

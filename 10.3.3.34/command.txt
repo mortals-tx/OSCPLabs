@@ -1,0 +1,16 @@
+http://10.3.3.34/passman.php
+
+SSH Credentials:
+username: root:
+password: bm90cGFzc3dvcmQ=
+
+MySql Credentials:
+username: root:
+password: 123456 	
+
+WordPress Credentials:
+username: admin:
+password: Ihax1337stuff
+
+ssh root@10.3.3.34 
+pass: bm90cGFzc3dvcmQ=

